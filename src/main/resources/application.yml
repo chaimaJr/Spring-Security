@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: Spring Security
+    datasource:
+        url: jdbc:mysql://localhost:3306/springsecurity
+        username: root
+        password:
+        driver-class-name: com.mysql.jdbc.Driver
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+        show-sql: true      # show executed queries
+        properties:
+          hibernate:
+            format_sql: true
+        database: mysql
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
