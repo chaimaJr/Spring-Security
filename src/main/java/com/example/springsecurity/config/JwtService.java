@@ -44,7 +44,7 @@ public class JwtService {
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())    // removed System.currentTimeMillis()
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 24))   // 24 hours
-                .signWith(getSignInKey(), SignatureAlgorithm.ES256)
+                .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();     // generates and returns the token
     }
 
